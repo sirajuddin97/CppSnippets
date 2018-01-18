@@ -42,7 +42,6 @@ void konverter(int orer){
 
 int main(){
   long int orer = 0;
-
   cout << "Hvor mange ører har du?: ";
   cin >> orer;
   konverter(orer);
