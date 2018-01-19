@@ -7,6 +7,7 @@ int main(){
     v[5] = res;
     cout << "Success!\n";
 
+    // hoppet over drill
     char ch; cin >> ch;
     return 0;
   }
