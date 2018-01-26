@@ -16,7 +16,7 @@ void startSpill(vector<char> tallVektor){
   system("clear");
   int gjettTall = 0;
   int riktig = 0, riktigTall1 = 0, riktigTall2 = 0, riktigTall3 = 0, riktigTall4 = 0;
-  cout << "SPILLET HAR STARTET! LYKKE TIL! ;-)" << endl;
+  cout << "SPILLET HAR STARTET! LYKKE TIL!" << endl;
 
   while(true){
     cout << "Gjett et firesifret tall (" << riktig << "/4 riktig så langt): ";
