@@ -33,7 +33,7 @@ public:
   }
 
   void scanString(){
-    if(sentence.size() >= 2){
+    if(sentence.size() >= 3){
       for(int i = 0; i < before_noun.size(); i++){
         if(sentence[0] == before_noun[i]){
           before_noun_exists = true;
@@ -52,7 +52,7 @@ public:
         }
       }
 
-      if(sentence.size() == 3){
+      if(sentence.size() == 4){
         for(int i = 0; i < conjunction.size(); i++){
           if(sentence[3] == conjunction[i]){
             conjunction_exists = true;
@@ -61,7 +61,7 @@ public:
       }
 
       if(conjunction_exists){
-        if(sentence.size() == 4){
+        if(sentence.size() == 5){
           for(int i = 0; i < before_noun.size(); i++){
             if(sentence[4] == before_noun[i]){
               before_noun2_exists = true;
@@ -69,7 +69,7 @@ public:
           }
         }
 
-        if(sentence.size() == 5){
+        if(sentence.size() == 6){
           for(int i = 0; i < noun.size(); i++){
             if(sentence[5] == noun[i]){
               noun2_exists = true;
@@ -77,7 +77,7 @@ public:
           }
         }
 
-        if(sentence.size() == 6){
+        if(sentence.size() == 7){
           for(int i = 0; i < verb.size(); i++){
             if(sentence[6] == verb[i]){
               verb2_exists = true;
@@ -92,8 +92,8 @@ public:
   }
 
   void result(){
-    if(sentence.size() >= 2){
-      if(before_noun_exists && noun_exists && verb_exists){
+    if(sentence.size() >= 3){
+      if(before_noun_exists && noun_exists && verb_exists && !conjunction_exists){
         cout << "Your sentence is correct!" << endl;
       }
       else{
@@ -118,8 +118,7 @@ int main(){
     check.scanString();
     check.result();
 
-    cout << endl;
-    main();
+    cout << endl; main();
     return 0;
   }
   catch(...){
