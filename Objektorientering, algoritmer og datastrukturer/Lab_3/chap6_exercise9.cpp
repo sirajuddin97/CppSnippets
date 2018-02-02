@@ -1,7 +1,7 @@
 #include "../../std_lib_facilities.h"
 
 class CharToInt{
-public:
+private:
   void writeDigits(){
     int digits = 0;
     cout << "Write four digits: ";
