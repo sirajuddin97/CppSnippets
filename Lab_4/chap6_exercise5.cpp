@@ -1,5 +1,7 @@
 #include "../../std_lib_facilities.h"
+
 /*
+Ikke ferdig med koden!
 Example: The bird flies but the fish swims.
 Before noun: the
 Noun: bird, fish
@@ -104,6 +106,27 @@ public:
           cout << "Invalid noun!" << endl;
         }
         if(!verb_exists){
+          cout << "Invalid verb!" << endl;
+        }
+      }
+
+      if(before_noun_exists && noun_exists && verb_exists && conjunction_exists){
+        if(!before_noun_exists){
+          cout << "Missing 'the' before noun!" << endl;
+        }
+        if(!noun_exists){
+          cout << "Invalid noun!" << endl;
+        }
+        if(!verb_exists){
+          cout << "Invalid verb!" << endl;
+        }
+        if(!before_noun2_exists){
+          cout << "Missing 'the' before noun!" << endl;
+        }
+        if(!noun2_exists){
+          cout << "Invalid noun!" << endl;
+        }
+        if(!verb2_exists){
           cout << "Invalid verb!" << endl;
         }
       }
