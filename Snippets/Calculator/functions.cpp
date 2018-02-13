@@ -1,5 +1,3 @@
-#include "header.h"
-
 /* Alternativ metode (bruke struct):
 struct regnestykke{
   double tall1 = 0;
@@ -10,6 +8,7 @@ regnestykke reg;
 vector<regnestykke> rekke;
 */
 
+#include "header.h"
 vector<double> rekke;
 
 Token skrivTall(){
@@ -33,10 +32,7 @@ void lesTall(){
 
   while(true){
     Token t = skrivTall();
-
-    if(t.kind == '='){
-      break;
-    }
+    if(t.kind == '=') break;
 
     switch(t.kind){
       case 'i':{
@@ -54,20 +50,12 @@ void lesTall(){
 void regnTall(){
   double sum = 0;
 
-  for(int i = 0; i < rekke.size(); i+=2){
-    if(rekke[i - 1] == '+'){
+  for(int i = 0; i < rekke.size(); i++){
+    if(rekke[i] != '+'){
       sum = sum + rekke[i];
-    }
-    else if(rekke[i + 1] == '-'){
-      sum = sum - rekke[i];
-    }
-    else if(rekke[i + 1] == '*'){
-      sum = sum * rekke[i];
-    }
-    else if(rekke[i + 1] == '/'){
-      sum = sum / rekke[i];
     }
   }
   cout << "> Svar: " << sum << endl << endl;
+  rekke.clear();
   main();
 }
