@@ -18,7 +18,8 @@ Token skrivTall(){
   switch(input){
     case '1' ... '9': {
       cin.putback(input);
-      double input2; cin >> input2;
+      double input2;
+      cin >> input2;
       return Token('i', input2);
     }
     case '+': case '-': case '*': case '/': case '=':{
