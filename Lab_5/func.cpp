@@ -1,4 +1,3 @@
-#include "../std_lib_facilities.h"
 #include "header.h"
 
 Fraction writeFraction(){
@@ -6,6 +5,5 @@ Fraction writeFraction(){
   cout << "Write your fraction (for example 2/4):" << endl;
   cin >> teller >> op >> nevner;
 
-  cin.putback(teller)
   return Fraction(teller, nevner);
 }
