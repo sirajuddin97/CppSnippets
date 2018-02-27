@@ -4,6 +4,7 @@ int main(){
   try{
     Stack s;
     s.push(3);
+    s.pop();
     int i = s.pop();
     cout << i << endl;
   }
