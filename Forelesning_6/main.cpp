@@ -6,6 +6,7 @@ int main(){
   string filename;
 
   try{
+    /*
     cout << "Enter file name: ";
     cin >> filename;
     cout << "Enter two ints: ";
@@ -16,6 +17,17 @@ int main(){
 
     cout << "Reading " << filename << ":" << endl;
     cout << n1 << " " << n2 << endl;
+    */
+
+    vector<int> v;
+    char terminator = 'q';
+    read_file(v, terminator);
+    read_user_input(v, terminator);
+    write_to_file(v, terminator);
+
+    for(int i = 0; i < v.size(); i++){
+      cout << v[i] << endl;
+    }
   }
   catch(int x){
     switch(x){
@@ -25,6 +37,10 @@ int main(){
       }
       case -2:{
         cerr << "Can't read file " << filename << endl;
+        break;
+      }
+      case -3:{
+        cerr << "ist is bad." << endl;
         break;
       }
     }
