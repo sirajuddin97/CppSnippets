@@ -20,7 +20,7 @@ int main(){
     std::cin.ignore(10000, '\n');
   }
   catch(...){
-    std::cerr << "Error: Something is wrong!" << "\n\n";
+    std::cerr << "Error: Unknown error!" << "\n\n";
   }
   main();
 }

@@ -17,7 +17,7 @@ void Commands::start(){
 }
 
 void Commands::help(){
-  std::cout << "Available commands: enqueue, dequeue, front, clear, size, help, exit" << "\n\n";
+  std::cout << "Commands: enqueue, dequeue, front, clear, size, help, exit" << "\n\n";
 }
 
 void Commands::clear(){
