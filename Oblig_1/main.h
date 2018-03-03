@@ -14,20 +14,19 @@ class Queue{
 public:
   class out_of_range{};
   class empty_queue{};
-  class invalid_input{};
+  class invalid_int{};
 
   void enqueue();
   void dequeue();
   void front();
-  void psize();
+  void size();
   bool is_full();
   bool is_empty();
-  int size();
 
 private:
   static const int max_size = 5;
   int qu_array[max_size];
   int counter = 0;
-  int head = 0;
-  int tail = 0;
+  int en_pos = 0;
+  int de_pos = 0;
 };

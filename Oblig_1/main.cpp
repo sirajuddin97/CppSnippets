@@ -14,7 +14,7 @@ int main(){
   catch(Queue::empty_queue){
     std::cerr << "Error: The queue is empty!" << "\n\n";
   }
-  catch(Queue::invalid_input){
+  catch(Queue::invalid_int){
     std::cerr << "Error: Only integers are allowed. Try again!" << "\n\n";
     std::cin.clear();
     std::cin.ignore(10000, '\n');

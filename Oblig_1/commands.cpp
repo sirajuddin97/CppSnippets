@@ -6,13 +6,13 @@ void Commands::start(){
   std::cin >> input;
 
   static Queue qu;
-  if(input == "help" || input == "cmds") help();
-  else if(input == "clear" || input == "cls") clear();
-  else if(input == "exit" || input == "quit") exit();
+  if(input == "help") help();
+  else if(input == "clear") clear();
+  else if(input == "exit") exit();
   else if(input == "enqueue" || input == "en") qu.enqueue();
   else if(input == "dequeue" || input == "de") qu.dequeue();
-  else if(input == "front" || input == "peek") qu.front();
-  else if(input == "size" || input == "psize") qu.psize();
+  else if(input == "front") qu.front();
+  else if(input == "size") qu.size();
   else throw invalid_cmd();
 }
 
