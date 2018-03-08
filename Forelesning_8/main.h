@@ -5,7 +5,7 @@ using namespace std;
 class Person{
 public:
   Person(string n, string id);
-  void print();
+  virtual void print();
   string get_name();
   string get_id();
 
@@ -17,7 +17,7 @@ private:
 class Student : public Person{
 public:
   Student(string n, string id, string prog, int cred);
-  void print();
+  virtual void print();
   void change_program(string new_program);
 
 private:
@@ -28,7 +28,7 @@ private:
 class Employee : public Person{
 public:
   Employee(string n, string id, string office);
-  void print();
+  virtual void print();
 
 private:
   string office_number;

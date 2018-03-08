@@ -1,7 +1,5 @@
 #include "main.h"
 
-vector<string> text;
-
 void Scanner::openFile(){
   ifstream hei{filename};
   string s;
@@ -19,7 +17,7 @@ void Scanner::editFile(){
 }
 
 void Scanner::replaceNumber(){
-
+  
 }
 
 void Scanner::saveFile(){

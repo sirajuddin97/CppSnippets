@@ -14,3 +14,6 @@ public:
 private:
   string filename = "text.txt";
 };
+
+static vector<string> text;
+static string numbers[] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};

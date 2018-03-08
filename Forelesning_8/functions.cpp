@@ -33,6 +33,7 @@ void Student::print(){
   Person::print();
   cout << "Study program: " << study_program << endl;
   cout << "Credits: " << credits << endl;
+  cout << endl;
 }
 
 // --------------------------------
@@ -44,4 +45,5 @@ Employee::Employee(string n, string id, string office) : Person(n, id){
 void Employee::print(){
   Person::print();
   cout << "Office number: " << office_number << endl;
+  cout << endl;
 }
