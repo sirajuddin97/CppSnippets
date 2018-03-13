@@ -4,8 +4,8 @@ using namespace std;
 
 class Person{
 public:
-  Person(string n, string id);
-  virtual void print();
+  Person(string n, string id) == 0;
+  virtual void print() == 0;
   string get_name();
   string get_id();
 
