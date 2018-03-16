@@ -6,7 +6,6 @@ using namespace std;
 class WordReplacer{
 public:
   void openFile();
-  void replaceText();
   void saveFile();
 
 private:

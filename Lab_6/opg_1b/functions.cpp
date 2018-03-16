@@ -12,7 +12,7 @@ void WordReplacer::openFile(){
         file.get(c); // samme som cin.get() eller file >> c;
 
         switch(c){
-          case '1' ... '9':{
+          case '0' ... '9':{
             cout << numbers[(int)c - 48];
             break;
           }
