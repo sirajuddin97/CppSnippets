@@ -20,6 +20,10 @@ int main(){
 
   // --------------------------
 
+  Person person = new Person("Finn", "9876");
+  Person p("Finn", "9876");
+  p.print();
+
   Person* pp[100];
   pp[0] = new Person("Finn", "9876");
   pp[1] = new Student("Kari", "1234", "Data", 35);

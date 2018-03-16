@@ -9,11 +9,9 @@ T generic_min(T a, T b){
   return b;
 }
 
-template <typename T, typename K>
+template <typename T>
 class Stack{
 public:
-  K tall;
-
   void push(T element){
     if(st_size == 100) cerr << "Push into full stack!" << endl;
     st[st_size] = element;

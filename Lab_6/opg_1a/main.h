@@ -10,10 +10,9 @@ public:
   void editFile();
   void replaceNumber();
   void saveFile();
-
+  
 private:
-  string filename = "text.txt";
+  const string filename = "text.txt";
 };
 
-static vector<string> text;
-static string numbers[] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+static vector<char> text;
