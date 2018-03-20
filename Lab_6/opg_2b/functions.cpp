@@ -1,13 +1,26 @@
 #include "main.h"
 
+// Constructors:
 Contact::Contact(){}
-
 Contact::Contact(string n, string e, int ph){
   name = n;
   email = e;
   phone_number = ph;
 }
 
+Personal::Personal(){}
+Personal::Personal(string n, string e, int ph, int bd, string adr) : Contact(n, e, ph){
+  birthday = bd;
+  home_address = adr;
+}
+
+Business::Business(){}
+Business::Business(string n, string e, int ph, string j, string r) : Contact(n, e, ph){
+  job = j;
+  rank = r;
+}
+
+// Root functions:
 void Contact::show_menu(){
   int option;
   system("clear");
@@ -106,22 +119,6 @@ void Contact::exit_program(){
   else{
     throw writefile_error();
   }
-}
-
-string Contact::get_name() const{
-  return name;
-}
-
-string Contact::get_email() const{
-  return email;
-}
-
-string Contact::get_filename() const{
-  return filename;
-}
-
-int Contact::get_phone() const{
-  return phone_number;
 }
 
 ostream& operator<<(ostream& ost, vector<Contact>& v){

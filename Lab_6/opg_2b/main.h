@@ -20,10 +20,6 @@ public:
   void new_contact();
   void search_contact();
   void exit_program();
-  string get_name() const;
-  string get_email() const;
-  string get_filename() const;
-  int get_phone() const;
 
   friend ostream& operator<<(ostream& ost, vector<Contact>& v);
   friend istream& operator>>(istream& ist, Contact& c);
@@ -33,6 +29,27 @@ private:
   string email;
   int phone_number;
   const string filename = "contacts.txt";
+};
+
+
+class Personal : public Contact{
+public:
+  Personal();
+  Personal(string, string, int, int, string);
+
+private:
+  int birthday;
+  string home_address;
+};
+
+class Business : public Contact{
+public:
+  Business();
+  Business(string, string, int, string, string);
+
+private:
+  string job;
+  string rank;
 };
 
 static vector<Contact> my_contacts;
