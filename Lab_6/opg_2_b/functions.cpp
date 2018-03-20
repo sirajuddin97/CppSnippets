@@ -72,7 +72,25 @@ void Contact::new_contact(){
 }
 
 void Contact::search_contact(){
+  system("clear");
+  string search_name;
+  cout << "Search name: ";
+  cin >> search_name;
+  bool found = false;
 
+  for(int i = 0; i < my_contacts.size(); i++){
+    if(my_contacts[i].name == search_name){
+      cout << endl << "CONTACT FOUND!" << endl;
+      cout << "Name: " << my_contacts[i].name << endl;
+      cout << "Email: " << my_contacts[i].email << endl;
+      cout << "Phone: " << my_contacts[i].phone_number << endl;
+      found = true;
+    }
+  }
+  if(found == false) cout << "Invalid search (no contact with that name)." << endl;
+  cout << endl << "Press a key to return to the menu!" << endl;
+  char ch; cin >> ch;
+  show_menu();
 }
 
 void Contact::exit_program(){
