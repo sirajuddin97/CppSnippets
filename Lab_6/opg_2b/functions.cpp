@@ -25,9 +25,11 @@ void Contact::show_menu(){
   int option;
   system("clear");
   cout << "SELECT AN OPTION:" << endl;
-  cout << "1. View all contacts" << endl;
-  cout << "2. Register a new contact" << endl;
-  cout << "3. Search for a contact" << endl;
+  cout << "1. View all personal contacts" << endl;
+  cout << "2. View all business contacts" << endl;
+  cout << "3. Register a personal contact" << endl;
+  cout << "4. Register a business contact" << endl;
+  cout << "5. Search for a contact" << endl;
   cout << "0. Exit program" << endl;
   cout << endl << "> Option: ";
   cin >> option;
