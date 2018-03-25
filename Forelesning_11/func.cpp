@@ -24,11 +24,33 @@ void selection_sort(int arr[], int len){
 }
 
 void insertion_sort(int arr[], int len){
+  insertion_sort(arr, len, 1);
+}
+
+void insertion_sort(int arr[], int len, int gap){
   for(int i = 1; i < len; i++){
     int j = i;
-    while(j > 0 && arr[j] < arr[j-1]){
-      swap(arr[j], arr[j-1]);
-      j--;
+    while(j >= gap && arr[j] < arr[j - gap]){
+      swap(arr[j], arr[j - gap]);
+      j = j - gap;
     }
   }
+}
+
+void shell_sort(int arr[], int len){
+  int gap = len / 2;
+  while(gap > 0){
+    insertion_sort(arr, len, gap);
+    gap = gap/2;
+  }
+}
+
+void merge_sort(int arr[], int len){
+  merge_sort(array, len, 0, len-1);
+}
+
+void merge_sort(int arr[], int len, int low, int high){
+  int mid = low + (high-low)/2;
+  merge_sort(arr, len, low, mid);
+  merge_sort(arr, len, mid+1, high);
 }

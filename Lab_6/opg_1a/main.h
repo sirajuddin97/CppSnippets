@@ -7,10 +7,7 @@ using namespace std;
 class Scanner{
 public:
   void openFile();
-  void editFile();
-  void replaceNumber();
-  void saveFile();
-  
+
 private:
   const string filename = "text.txt";
 };

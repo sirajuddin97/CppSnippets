@@ -10,7 +10,3 @@ void Scanner::openFile(){
   }
   file.close();
 }
-
-void Scanner::editFile(){
-  
-}

@@ -79,7 +79,7 @@ void Contact::search_contact(){
   bool found = false;
 
   for(int i = 0; i < my_contacts.size(); i++){
-    if(my_contacts[i].name == search_name){
+    if(search_name == my_contacts[i].name){
       cout << endl << "CONTACT FOUND!" << endl;
       cout << "Name: " << my_contacts[i].name << endl;
       cout << "Email: " << my_contacts[i].email << endl;
