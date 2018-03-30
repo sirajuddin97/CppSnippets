@@ -29,6 +29,7 @@ int main(){
   v3.push_back(d);
   delete d;
 
+  // Printe ut:
   cout << v[0].name << endl;
   cout << v2[0]->name << endl;
   cout << v3[0]->name << endl;
