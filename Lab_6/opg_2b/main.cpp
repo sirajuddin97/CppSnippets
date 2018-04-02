@@ -2,8 +2,9 @@
 
 int main(){
   try{
-    load_contacts();
-    show_menu();
+    Contact c;
+    c.load_contacts();
+    c.show_menu();
   }
   catch(invalid_option){
     cerr << "Error: Invalid option. Please try again!" << endl;
