@@ -4,10 +4,6 @@ BT::BT(){
   root = nullptr;
 }
 
-BT::~BT(){
-
-}
-
 void BT::insert(int v){
   root = insert(root, v);
 }
@@ -28,4 +24,60 @@ BTNode* BT::search(BTNode* n, int v){
   if(v == n->value) return n;
   if(v < n->value) return search(n->left, v);
   return search(n->right, v);
+}
+
+void BT::remove(BTNode* rem){
+  if(rem == nullptr) throw nullptr_error();
+  root = remove(root, rem);
+}
+
+BTNode* BT::remove(BTNode* n, BTNode* rem){
+  if(n == nullptr) throw node_error();
+  if(n == rem){
+    if(n->left == nullptr){
+      BTNode* temp = n->right;
+      delete n;
+      return temp;
+    }
+    if(n->right == nullptr){
+      BTNode* temp = n->left;
+      delete n;
+      return temp;
+    }
+    BTNode* minimum = findMinimum(n->right);
+    n->value = minimum->value;
+    n->right = remove(n->right, minimum);
+  }
+  else if(rem->value <= n->value){
+    n->left = remove(n->left, rem);
+  }
+  else{
+    n->right = remove(n->right, rem);
+  }
+  return n;
+}
+
+BTNode* BT::findMinimum(BTNode* n){
+  if(n->left == nullptr) return n;
+  return findMinimum(n->left);
+}
+
+void BT::printPrefix(){
+  printPrefix(root);
+  cout << endl;
+}
+
+void BT::printPrefix(BTNode* n){
+  if(n == nullptr) return;
+  cout << n->value << " ";
+  printPrefix(n->left);
+  printPrefix(n->right);
+}
+
+void BT::printPostfix(BTNode* n){
+
+}
+
+void BT::printInfix(BTNode* n){
+
 }

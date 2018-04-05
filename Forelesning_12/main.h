@@ -2,6 +2,9 @@
 #include <string>
 using namespace std;
 
+class nullptr_error{};
+class node_error{};
+
 struct BTNode{
   int value;
   BTNode* left;
@@ -12,12 +15,20 @@ struct BTNode{
 class BT{
 public:
   BT();
-  ~BT();
   void insert(int);
   BTNode* search(int);
+  void remove(BTNode*);
+  void printPrefix();
+  void printPostfix();
+  void printInfix();
 
 private:
   BTNode* insert(BTNode*, int);
   BTNode* search(BTNode*, int);
+  BTNode* remove(BTNode*, BTNode*);
+  BTNode* findMinimum(BTNode*);
+  void printPrefix(BTNode*);
+  void printPostfix(BTNode*);
+  void printInfix(BTNode*);
   BTNode* root;
 };
