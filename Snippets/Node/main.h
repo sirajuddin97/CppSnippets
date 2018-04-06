@@ -2,6 +2,8 @@
 #include <string>
 using namespace std;
 
+class empty_list{};
+
 class Node{
 public:
   Node(int, Node*);
@@ -16,9 +18,13 @@ private:
 class LinkedList{
 public:
   LinkedList();
-  void add_front(int);
+  ~LinkedList();
   bool is_empty();
   int get_size();
+  int front();
+  void add_front(int);
+  void add_back(int);
+  void print_all();
 
 private:
   Node* head;
