@@ -21,7 +21,7 @@ LinkedList::LinkedList(){
 }
 
 LinkedList::~LinkedList(){
-  // fjern ting
+  
 }
 
 int LinkedList::get_size(){
