@@ -21,7 +21,7 @@ LinkedList::LinkedList(){
 }
 
 LinkedList::~LinkedList(){
-  
+  remove_all();
 }
 
 int LinkedList::get_size(){
@@ -41,6 +41,22 @@ void LinkedList::add_front(int n){
 
 void LinkedList::add_back(int n){
   // ikke ferdig
+}
+
+void LinkedList::remove_front(){
+  if(!is_empty()){
+    Node* temp = head->get_next();
+    delete head;
+    head = temp;
+    size--;
+  }
+  else throw empty_list();
+}
+
+void LinkedList::remove_all(){
+  while(!is_empty()){
+    remove_front();
+  }
 }
 
 int LinkedList::front(){

@@ -9,6 +9,14 @@ int main(){
     li.add_front(4);
     li.add_front(5);
     li.print_all();
+
+    cout << endl;
+    li.remove_front();
+    li.print_all();
+
+    cout << endl;
+    li.remove_all();
+    li.print_all();
   }
   catch(empty_list){
     cerr << "No nodes found (empty list)." << endl;

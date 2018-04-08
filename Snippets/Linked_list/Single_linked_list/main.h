@@ -24,6 +24,8 @@ public:
   int front();
   void add_front(int);
   void add_back(int);
+  void remove_front();
+  void remove_all();
   void print_all();
 
 private:
