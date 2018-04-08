@@ -8,6 +8,10 @@ int main(){
     li.add_front(3);
     li.add_front(4);
     li.add_front(5);
+    li.add_back(6);
+    li.add_back(7);
+    li.add_back(8);
+    li.add_back(9);
     li.print_all();
 
     cout << endl;

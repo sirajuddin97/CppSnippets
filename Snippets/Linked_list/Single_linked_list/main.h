@@ -9,6 +9,7 @@ public:
   Node(int, Node*);
   int get_data();
   Node* get_next();
+  void set_next(Node*);
 
 private:
   int data;

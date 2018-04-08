@@ -13,6 +13,10 @@ Node* Node::get_next(){
   return next;
 }
 
+void Node::set_next(Node* newNode){
+  next = newNode;
+}
+
 // ------------------------------------------
 
 LinkedList::LinkedList(){
@@ -40,7 +44,22 @@ void LinkedList::add_front(int n){
 }
 
 void LinkedList::add_back(int n){
-  // ikke ferdig
+  if(is_empty()){
+    add_front(n);
+  }
+  else{
+    Node* temp = head;
+    for(int i = 0; i < size; i++){
+      if(temp->get_next() != nullptr){
+        temp = temp->get_next();
+      }
+      else{
+        Node* newNode = new Node(n, nullptr);
+        temp->set_next(newNode);
+        size++;
+      }
+    }
+  }
 }
 
 void LinkedList::remove_front(){
