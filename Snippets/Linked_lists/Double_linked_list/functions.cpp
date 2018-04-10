@@ -20,17 +20,10 @@ bool LinkedList::is_empty(){
 }
 
 void LinkedList::add_front(int d){
-  if(is_empty()){
-    Node* newNode = new Node(d, head, nullptr);
-    head = newNode;
-    size++;
-  }
-  else{
-    Node* newNode = new Node(d, head, nullptr);
-    head->prev = newNode;
-    head = newNode;
-    size++;
-  }
+  Node* newNode = new Node(d, head, nullptr);
+  if(!is_empty()) head->prev = newNode;
+  head = newNode;
+  size++;
 }
 
 void LinkedList::add_back(int d){
@@ -40,13 +33,13 @@ void LinkedList::add_back(int d){
   else{
     Node* temp = head;
     for(int i = 0; i < size; i++){
-      if(temp->next == nullptr){
+      if(temp->next != nullptr){
+        temp = temp->next;
+      }
+      else{
         Node* newNode = new Node(d, nullptr, temp);
         temp->next = newNode;
         size++;
-      }
-      else{
-        temp = temp->next;
       }
     }
   }
