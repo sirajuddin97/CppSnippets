@@ -15,6 +15,7 @@ struct BTNode{
 class BT{
 public:
   BT();
+  ~BT();
   void insert(int);
   BTNode* search(int);
   void remove(BTNode*);
@@ -30,5 +31,6 @@ private:
   void printPrefix(BTNode*);
   void printPostfix(BTNode*);
   void printInfix(BTNode*);
+  void destroy_tree(BTNode*);
   BTNode* root;
 };

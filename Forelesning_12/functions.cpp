@@ -4,6 +4,17 @@ BT::BT(){
   root = nullptr;
 }
 
+BT::~BT(){
+  destroy_tree(root);
+}
+
+void BT::destroy_tree(BTNode* n){
+  if(n == nullptr) return;
+  destroy_tree(n->left);
+  destroy_tree(n->right);
+  delete n;
+}
+
 void BT::insert(int v){
   root = insert(root, v);
 }
