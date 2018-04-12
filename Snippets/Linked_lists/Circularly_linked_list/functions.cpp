@@ -21,6 +21,7 @@ void Node::set_next(Node* n){
 
 LinkedList::LinkedList(){
   head = nullptr;
+  tail = nullptr;
   size = 0;
 }
 
@@ -36,13 +37,14 @@ void LinkedList::add_front(int d){
   if(is_empty()){
     Node* newNode = new Node(d, nullptr);
     head = newNode;
+    tail = newNode;
     size++;
   }
   else{
     Node* newNode = new Node(d, head);
     Node* temp = head;
     for(int i = 0; i < size; i++){
-      if(temp->get_next() != nullptr){
+      if(temp != tail){
         temp = temp->get_next();
       }
       else{
@@ -51,5 +53,30 @@ void LinkedList::add_front(int d){
     }
     head = newNode;
     size++;
+  }
+}
+
+void LinkedList::add_back(int d){
+  // gjør denne takk
+}
+
+void LinkedList::print_all(){
+  if(!is_empty()){
+    Node* temp = head;
+    for(int i = 0; i < size; i++){
+      cout << temp->get_data() << " ";
+      if(temp != tail){
+        temp = temp->get_next();
+      }
+    }
+    cout << endl;
+  }
+}
+
+void LinkedList::print_loop(){
+  if(!is_empty()){
+    for(int i = 0; i < 5; i++){
+      print_all();
+    }
   }
 }

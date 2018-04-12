@@ -20,8 +20,12 @@ public:
   ~LinkedList();
   bool is_empty();
   void add_front(int);
+  void add_back(int);
+  void print_all();
+  void print_loop();
 
 private:
   Node* head;
+  Node* tail;
   int size;
 };
