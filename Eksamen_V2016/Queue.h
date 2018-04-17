@@ -13,9 +13,17 @@ class Queue{
 public:
   Queue();
   ~Queue();
+  void enqueue(D);
+  void dequeue();
+  void print_first();
+  void print_all();
 
 private:
   Node* front;
   Node* back;
   int size;
+  static const int max_size = 10;
 };
+
+class full_queue{};
+class empty_queue{};
