@@ -14,5 +14,5 @@ int main(){
   }
 
   cout << "Number of threads: " << thread::hardware_concurrency() << endl;
-  return 0;
+  return 0; 
 }
