@@ -12,7 +12,7 @@ int main(){
   if(t1.joinable()){
     t1.join();
   }
-
+  
   cout << "Number of threads: " << thread::hardware_concurrency() << endl;
   return 0;
 }
