@@ -4,5 +4,6 @@
 #include <mutex>
 using namespace std;
 
-void print_numbers();
 static mutex mu;
+// void print_numbers();
+void print_numbers(int);
