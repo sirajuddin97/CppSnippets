@@ -19,11 +19,19 @@ void swap_int(int& i1, int& i2){
 }
 
 void shell_sort(int list[]){
-  for(int i = 0; i < length; i++){
-    int cur = i;
-    while((cur > 0) && (list[cur+1] < list[cur])){
-      swap_int(list[cur+1], list[cur]);
-      cur--;
+  int gap = length/2;
+  while(gap > 0){
+    insertion_sort(list, gap);
+    gap = gap/2;
+  }
+}
+
+void insertion_sort(int list[], int gap){
+  for(int i = gap; i < length; i++){
+    int j = i;
+    while((j >= gap) && (list[j] < list[j-gap])){
+      swap_int(list[j], list[j-gap]);
+      j = j-gap;
     }
   }
 }
